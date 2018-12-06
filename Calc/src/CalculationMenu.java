@@ -22,6 +22,32 @@ public class CalculationMenu extends JFrame implements ActionListener{
 		b.setBounds(100,100,150, 40);
 		calcScreen.add(b);
 		
+		JPanel chooseHand=new JPanel();
+		calcScreen.add(chooseHand);
+		JLabel suit=new JLabel("Choose your suit");
+		suit.setVisible(true);
+		chooseHand.add(suit);
+		
+		String[] suits={"Spades", "Clubs", "Diamond", "Hearts"};
+		JComboBox<String> suitOptions=new JComboBox<String>(suits);
+		suitOptions.setVisible(true);
+		chooseHand.add(suitOptions);
+		
+		JButton suitRefresh=new JButton("Refresh");
+		chooseHand.add(suitRefresh);
+		
+		JLabel nums=new JLabel("Choose your number");
+		nums.setVisible(true);
+		chooseHand.add(nums);
+		
+		String[] cardVals={"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"};
+		JComboBox<String> cardValOptions=new JComboBox<String>(cardVals);
+		cardValOptions.setVisible(true);
+		chooseHand.add(cardValOptions);
+		
+		JButton cardValRefresh=new JButton("Refresh");
+		chooseHand.add(cardValRefresh);
+		
 		calcScreen.setLayout(null);
 		calcScreen.setVisible(true);
 		
