@@ -8,8 +8,8 @@ public class Calculator {
 	Card flop1 = new Card(11, 4);
 	Card flop2 = new Card(5, 3);
 	Card flop3 = new Card(6, 3);
-	Card turn = new Card(12,4);
-	Card river;
+	Card turn = new Card(0,0);
+	Card river = new Card(0,0);
 	//CONSTRUCTORS
 	public Calculator(){
 		MakeArray();
@@ -41,6 +41,7 @@ public class Calculator {
 		}*/
 	}
 	public void FixArray(){
+		MakeArray();
 		for(Card TestedCard: Cardlist) {
 			if(turn!=null) {
 				if(TestedCard.getSuit()==turn.getSuit()&&TestedCard.getNum()==turn.getNum()){
@@ -54,13 +55,28 @@ public class Calculator {
 			}
 		}
 	}
+	
 	//ACCESSORS
-	public Card getCard(int num) {
-		return Cardlist.get(num);
-	}
-	public int getSize() {
-		return Cardlist.size();
-	}
+	public Card getCard(int num) {return Cardlist.get(num);}
+	public int getSize() {return Cardlist.size();}
+	public Hand getUserhand() {return Userhand;}
+	
+	//ACCESSORS
+	public void setUserhand1N(int num){Userhand.getFirstCard().setNum(num);}
+	public void setUserhand1S(int suit){Userhand.getFirstCard().setSuit(suit);}
+	public void setUserhand2N(int num){Userhand.getSecondCard().setNum(num);}
+	public void setUserhand2S(int suit){Userhand.getSecondCard().setSuit(suit);}
+	public void setflop1N(int num){flop1.setNum(num);}
+	public void setflop1S(int suit){flop1.setSuit(suit);}
+	public void setflop2N(int num){flop2.setNum(num);}
+	public void setflop2S(int suit){flop2.setSuit(suit);}
+	public void setflop3N(int num){flop3.setNum(num);}
+	public void setflop3S(int suit){flop3.setSuit(suit);}
+	public void setturnN(int num){turn.setNum(num);}
+	public void setturnS(int suit){turn.setSuit(suit);}
+	public void setriverN(int num){river.setNum(num);}
+	public void setriverS(int suit){river.setSuit(suit);}
+	
 	/*Precondition: Given a hand
 	 */
 	public double RoyalFlush(){

@@ -17,4 +17,12 @@ public class Card {
 	public int getSuit(){
 		return Suit;
 	}
+	
+	//MUTATORS
+	public void setNum(int newNum){
+		cardNum=newNum;
+	}
+	public void setSuit(int newSuit){
+		Suit=newSuit;
+	}
 }

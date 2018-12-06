@@ -18,4 +18,14 @@ public class Hand {
 		return secondCard;
 	}
 	
+	//MUTATORS
+	public void setFirstCard(Card a){
+		firstCard.setNum(a.getNum());
+		firstCard.setSuit(a.getSuit());
+	}
+	
+	public void setSecondCard(Card b){
+		secondCard.setNum(b.getNum());
+		secondCard.setSuit(b.getSuit());
+	}
 }
